@@ -1,0 +1,31 @@
+<include file="Public/header" />
+<include file="Public/nav" />
+    <div class="row-fluid" id="main">
+        <div class="span8 offset2">
+            <form class="form-horizontal " action="__URL__/saveNode" method="post">
+                <h3>分配节点</h3>
+                <input type="hidden" name="id" value="{$roleInfo.id}">
+                <div class="control-group">
+                    当前为<font color="red"size="5px"> {$roleInfo.name}</font>分配节点
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <foreach name="nodelist" item="vo">
+                        {$vo.name} <input type="checkbox" name="nid[]" <if condition="in_array($vo['id'],$nids)">checked</if> value="{$vo.id}"><br>
+                        </foreach>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            &nbsp;
+                        </label>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分配节点&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<include file="Public/footer" />

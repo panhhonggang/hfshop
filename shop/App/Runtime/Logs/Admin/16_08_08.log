@@ -1,0 +1,66 @@
+[ 2016-08-08T14:18:13+08:00 ] 192.168.12.254 /gz16/think04/Admin/user
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+ERR: 无法加载数据库驱动: Think\Db\Driver\
+
+[ 2016-08-08T14:19:48+08:00 ] 192.168.12.254 /gz16/think04/Admin/css/bootstrap.min.css
+ERR: 无法加载控制器:Css
+
+[ 2016-08-08T14:19:48+08:00 ] 192.168.12.254 /gz16/think04/Admin/css/bootstrap-responsive.min.css
+ERR: 无法加载控制器:Css
+
+[ 2016-08-08T14:19:48+08:00 ] 192.168.12.254 /gz16/think04/Admin/js/bootstrap.min.js
+ERR: 无法加载控制器:Js
+
+[ 2016-08-08T14:19:49+08:00 ] 192.168.12.254 /gz16/think04/Admin/css/style.css
+ERR: 无法加载控制器:Css
+
+[ 2016-08-08T14:19:49+08:00 ] 192.168.12.254 /gz16/think04/Admin/js/jquery-1.8.3.min.js
+ERR: 无法加载控制器:Js
+
+[ 2016-08-08T14:19:50+08:00 ] 192.168.12.254 /gz16/think04/Admin/js/bootstrap.min.js
+ERR: 无法加载控制器:Js
+
+[ 2016-08-08T15:07:00+08:00 ] 192.168.12.254 /gz16/think04/Admin/User/add
+ERR: 1062:Duplicate entry 'jack' for key 'name'
+ [ SQL语句 ] : INSERT INTO `user` (`name`,`password`,`tel`) VALUES ('jack','123','13422380515')
+
+[ 2016-08-08T15:10:36+08:00 ] 192.168.12.26 /gz16/think04/Admin/User/edit/id/60
+ERR: 非法操作:edit
+
+[ 2016-08-08T15:15:03+08:00 ] 192.168.12.254 /gz16/think04/Admin/User/add
+ERR: 1062:Duplicate entry '王五' for key 'name'
+ [ SQL语句 ] : INSERT INTO `user` (`name`,`password`,`tel`,`logtime`,`retime`) VALUES ('王五','202cb962ac59075b964b07152d234b70','13422380515','1470640502','1470640502')
+
+[ 2016-08-08T15:19:24+08:00 ] 192.168.12.254 /gz16/think04/Admin/User/add
+ERR: 1062:Duplicate entry '' for key 'name'
+ [ SQL语句 ] : INSERT INTO `user` (`name`,`password`,`tel`,`logtime`,`retime`) VALUES ('','d41d8cd98f00b204e9800998ecf8427e','','1470640763','1470640763')
+
+[ 2016-08-08T15:25:17+08:00 ] 192.168.12.254 /gz16/think04/Admin/User/add
+ERR: Think\Controller:getError方法不存在！
+
+[ 2016-08-08T15:26:05+08:00 ] 192.168.12.26 /gz16/think04/Admin/User/add
+ERR: Think\Controller:getError方法不存在！
+
+[ 2016-08-08T15:37:42+08:00 ] 192.168.12.26 /gz16/think04/Admin/User/del/id/66
+ERR: 非法操作:del
+
+[ 2016-08-08T15:37:46+08:00 ] 192.168.12.26 /gz16/think04/Admin/User/edit/id/66
+ERR: 非法操作:edit
+
+[ 2016-08-08T16:43:05+08:00 ] 192.168.12.254 /gz16/think04/Admin/User/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') OR `tel` = '123' ORDER BY id desc LIMIT 0,8' at line 1
+ [ SQL语句 ] : SELECT * FROM `user` WHERE (  ) OR `tel` = '123' ORDER BY id desc LIMIT 0,8  
+
+[ 2016-08-08T16:44:33+08:00 ] 192.168.12.254 /gz16/think04/Admin/User/index
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND `tel` = '123' ORDER BY id desc LIMIT 0,8' at line 1
+ [ SQL语句 ] : SELECT * FROM `user` WHERE (  ) AND `tel` = '123' ORDER BY id desc LIMIT 0,8  
+
+[ 2016-08-08T16:53:19+08:00 ] 192.168.12.254 /gz16/think04/Admin/User/getDate
+ERR: 1146:Table 'gz16.user' doesn't exist
+ [ SQL语句 ] : select * from user
+

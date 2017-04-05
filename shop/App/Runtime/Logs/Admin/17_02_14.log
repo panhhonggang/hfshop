@@ -1,0 +1,42 @@
+[ 2017-02-14T10:23:34+08:00 ] ::1 /2lanou/project/Admin/Login/login.html
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-02-14T11:46:40+08:00 ] ::1 /2lanou/project/Admin/Subject/index.html
+ERR: 模板不存在:./App/Admin/View/Subject/index.html
+
+[ 2017-02-14T11:53:31+08:00 ] ::1 /2lanou/project/Admin/Subject/add.html
+ERR: Think\Model:getAll方法不存在！
+
+[ 2017-02-14T13:46:13+08:00 ] ::1 /2lanou/project/Admin/Subject/index.html
+ERR: 模板不存在:./App/Admin/View/Subject/index.html
+
+[ 2017-02-14T13:46:37+08:00 ] ::1 /2lanou/project/Admin/Subject/index.html
+ERR: 模板不存在:./App/Admin/View/Subject/index.html
+
+[ 2017-02-14T14:06:59+08:00 ] ::1 /2lanou/project/Admin/Subject/add
+ERR: 1364:Field 'addtime' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `lo_subject` (`subject`,`number`) VALUES ('11','3')
+
+[ 2017-02-14T14:07:48+08:00 ] ::1 /2lanou/project/Admin/Subject/add
+ERR: 1364:Field 'addtime' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `lo_subject` (`subject`,`number`) VALUES ('PHP','5')
+
+[ 2017-02-14T14:08:25+08:00 ] ::1 /2lanou/project/Admin/Subject/add
+ERR: 1364:Field 'addtime' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `lo_subject` (`subject`,`number`) VALUES ('PHP','10')
+
+[ 2017-02-14T14:09:29+08:00 ] ::1 /2lanou/project/Admin/Subject/index.html
+ERR: 模板不存在:./App/Admin/View/Subject/index.html
+
+[ 2017-02-14T14:09:56+08:00 ] ::1 /2lanou/project/Admin/Subject/index.html
+ERR: 模板不存在:./App/Admin/View/Subject/index.html
+
+[ 2017-02-14T14:10:29+08:00 ] ::1 /2lanou/project/Admin/Subject/index.html
+ERR: 模板不存在:./App/Admin/View/Subject/index.html
+
+[ 2017-02-14T14:10:32+08:00 ] ::1 /2lanou/project/Admin/Subject/index.html
+ERR: 模板不存在:./App/Admin/View/Subject/index.html
+
+[ 2017-02-14T14:13:20+08:00 ] ::1 /2lanou/project/Admin/Subject/list.html
+ERR: 非法操作:list
+

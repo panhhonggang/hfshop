@@ -1,0 +1,7 @@
+[ 2016-08-16T10:19:06+08:00 ] ::1 /gz16/object02/Admin/Index/test
+ERR: 非法操作:test
+
+[ 2016-08-16T10:31:00+08:00 ] ::1 /gz16/object02/Admin/user/test
+ERR: 1583:Incorrect parameters in the call to native function 'concat'
+ [ SQL语句 ] : SELECT * FROM `lamp_user` ORDER BY concat(name id) 
+

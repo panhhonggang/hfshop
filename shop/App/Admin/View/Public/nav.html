@@ -1,0 +1,49 @@
+
+
+    <div class="row-fluid" id="nav">
+        <div class="span8 offset2">
+            <ul class="nav nav-pills">
+                <li class="active">
+                    <a href="#">首页</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">权限管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-toggle">用户管理</li>
+                        <li><a href="{:U('User/add')}">添加老师</a></li>
+                        <li><a href="{:U('User/index')}">老师列表</a></li>
+
+                        <li class="dropdown-toggle">角色管理</li>
+                        <li><a href="{:U('Role/add')}">添加角色</a></li>
+                        <li><a href="{:U('Role/index')}">角色列表</a></li>
+
+                        <li class="dropdown-toggle">节点管理</li>
+                        <li><a href="{:U('Node/add')}">添加节点</a></li>
+                        <li><a href="{:U('Node/index')}">节点列表</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">实训学科管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{:U('Subject/add')}">添加学科</a></li>
+                        <li><a href="{:U('Subject/index')}">学科列表</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">分类管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">添加分类</a></li>
+                        <li><a href="#">分类列表</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">{$Think.session.adminuser.name}<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="{:U('Login/logout')}">注销</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
