@@ -1,4 +1,21 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><html >
+	<head>
+		<style >
+			
+			td{
+				width: 10%;
+				height: 50px;
+
+			}
+			
+			#search{
+				height: 30px;
+			}
+		</style>		
+		
+	</head>
+	<body>
+		<!DOCTYPE HTML>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +38,7 @@
             <p class="lead">欢迎各位老师来后蓝鸥商城平台后台！</p>
         </div>
     </div>
-
+		
 
     <div class="row-fluid" id="nav">
         <div class="span8 offset2">
@@ -66,59 +83,63 @@
             </ul>
         </div>
     </div>
-    <div class="row-fluid" id="main">
-        <div class="span8 offset2">
-            <form class="form-horizontal " action="/shop/Admin/User/add" method="post">
-                <h3>添加管理员</h3>
 
-                <div class="control-group">
-                    <label class="control-label">账户名</label>
-                    <div class="controls">
-                        <input type="text" name="admin_name" placeholder="就是你用来登录的那玩意儿">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">密码</label>
-                    <div class="controls">
-                        <input type="password" name="admin_pass" placeholder="密码！！！！">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">确认密码</label>
-                    <div class="controls">
-                        <input type="password" name="repassword" placeholder="再输一次，怕你弄错了">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">真实姓名</label>
-                    <div class="controls">
-                        <input type="text" name="truename" placeholder="来者何人？报上名来！">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">邮箱</label>
-                    <div class="controls">
-                        <input type="email" name="email" placeholder="输入邮箱账户">
-                    </div>
-                </div>
-                
-                <div class="control-group">
-                    <div class="controls">
-                        <label class="checkbox">
-                            &nbsp;
-                        </label>
-                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+		<div class="row-fluid" id="main">
+		
+		<div class="span8 offset2">		
 
-    <div class="row-fluid" id="footer">
+		    <form class="form-search fr" action=<?php echo U('Goods/find');?> method="post">
+			    			请输入商品名：
+		    	<input type="text" id = 'search' name="name" value="name" class="input-medium" placeholder="Name">
+		    	<button type="submit" class="btn">搜索</button>
+		    </form>
+		    
+
+			<table class="table table-striped">
+				<thead>
+				<tr>
+					<th>编号</th>
+					<th>分类id</th>
+					<th>商品名</th>
+					<th>商品图片</th>
+					<th>商品价格</th>
+					<th>商品简介</th>
+					<th>上架与否</th>
+	  		        <th>销售状态</th>
+			        <th>添加时间</th>
+			        <th>操作</th>
+
+				</tr>
+				</thead>
+				<tbody>
+ <?php if(is_array($info)): foreach($info as $key=>$v): ?><tr>
+            <?php if(is_array($v)): foreach($v as $k=>$vv): ?><td>
+                <?php if($k == addtime): echo (date("Y-m-d H:i:s",$vv)); ?>
+	            <?php elseif($k == picture): ?>
+	            <img src="<?php echo (SITE_URL); echo ($vv); ?>">
+	            <?php else: ?>
+	            <?php echo ($vv); endif; ?>
+            </td><?php endforeach; endif; ?>
+            <td>
+	            <a href="<?php echo U('Goods/remove',array('id'=>$v['id']));?>">删除</a>
+	            <a href="<?php echo U('Goods/update',array('id'=>$v['id']));?>">更新</a>
+
+            </td>
+          </tr><?php endforeach; endif; ?>
+					
+				</tbody>
+			</table>
+			
+		</div>
+	</div>
+	
+		    <div class="row-fluid" id="footer">
         <div class="span8 offset2">
             <p>©2012 - 2017 Lanou 蓝鸥(广州)</p>
         </div>
     </div>
 
 </body>
+</html>
+	</body>
 </html>

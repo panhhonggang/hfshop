@@ -1,0 +1,39 @@
+<include file="Public/header" />
+<include file="Public/nav" />
+    <div class="row-fluid" id="main">
+        <div class="span8 offset2">
+            <form class="form-horizontal " action="__URL__/add" method="post">
+                <h3>添加前台用户</h3>
+
+                <div class="control-group">
+                    <label class="control-label">账户名</label>
+                    <div class="controls">
+                        <input type="text" name="home_name" placeholder="就是你用来登录的那玩意儿">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">密码</label>
+                    <div class="controls">
+                        <input type="password" name="home_pass" placeholder="密码！！！！">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">确认密码</label>
+                    <div class="controls">
+                        <input type="password" name="repassword" placeholder="再输一次，怕你弄错了">
+                    </div>
+                </div>
+            
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            &nbsp;
+                        </label>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<include file="Public/footer" />

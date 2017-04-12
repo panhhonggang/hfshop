@@ -1,0 +1,91 @@
+<html >
+	<head>
+		<style >
+			#inputEmail{
+				height: 30px;
+			}
+
+			
+		</style>
+	
+	</head>
+	<body>
+		<include file="Public/header" />
+		<include file="Public/nav" />
+				<div class="row-fluid" id="main">
+		
+		<div class="span8 offset2">	
+			
+			<form class="form-horizontal" action= {:U('Goods/update')} method="post" enctype="multipart/form-data">
+				<h3>商品更新</h3>
+				<input type="hidden" value={$info.id} name="id"/>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail">分类id</label>
+				   <div class="controls">
+         	        <select name = 'cateName' type="text">
+			         <foreach name = 'ids' item = 'v'>
+				        <if condition = "$v['id'] == $info['cateid']">
+				         <option selected>{$v.name}</option>
+				        <else/>
+	 			         <option>{$v.name}</option>
+	 			        </if>
+			         </foreach>
+			        </select>
+				   </div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail">商品名称</label>
+					<div class="controls">
+						<input type="text" id="inputEmail" name = "name"  value={$info.name}>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail" >价格</label>
+					<div class="controls">
+						<input type="text" id="inputEmail" name = "price"
+						 value={$info.price}>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail" >是否下架</label>
+					<div class="controls">
+						<input type="text" id="inputEmail" name = "display"
+						value={$info.display}>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<label class="control-label" for="inputEmail">商品状态</label>
+					<div class="controls">
+						<input type="text" id="inputEmail"  name = "status"  value={$info.status}>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail" >商品简介</label>
+					<div class="controls">
+						<textarea id="inputEmail"  name = "descripe">{$info.descripe}</textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail" >商品图片</label>
+					<div class="controls">
+						<input type="file" id="inputEmail" name = "picture">
+					</div>
+				</div>
+				
+				<div class="control-group">
+					<div class="controls">
+						<label class="checkbox">
+							&nbsp;
+						</label>
+						<button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提交&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+					</div>
+				</div>
+			</form>			
+
+		</div>
+		</div>
+
+	</body>
+</html>
+

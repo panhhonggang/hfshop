@@ -1,0 +1,85 @@
+[ 2017-04-10T09:53:07+08:00 ] ::1 /shop/Admin/User/index.html
+ERR: 1146:Table 'shop.hf_auser' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `hf_auser`
+
+[ 2017-04-10T09:54:43+08:00 ] ::1 /shop/Admin/User/index.html
+ERR: Think\Model:getAll方法不存在！
+
+[ 2017-04-10T09:57:27+08:00 ] ::1 /shop/Admin/User/index.html
+ERR: Think\Model:getAll方法不存在！
+
+[ 2017-04-10T09:58:16+08:00 ] ::1 /shop/Admin/User/index.html
+ERR: Think\Model:getAll方法不存在！
+
+[ 2017-04-10T10:18:42+08:00 ] ::1 /shop/Admin/User/index.html
+ERR: Think\Model:getAll方法不存在！
+
+[ 2017-04-10T10:19:03+08:00 ] ::1 /shop/Admin/User/index.html
+ERR: Think\Model:getAll方法不存在！
+
+[ 2017-04-10T10:20:04+08:00 ] ::1 /shop/Admin/User/index.html
+ERR: Think\Model:getAll方法不存在！
+
+[ 2017-04-10T10:58:27+08:00 ] ::1 /shop/Admin/User/add
+ERR: 1146:Table 'shop.hf_auser' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `hf_auser`
+
+[ 2017-04-10T11:05:26+08:00 ] ::1 /shop/Admin/User/add
+ERR: 1146:Table 'shop.hf_auser' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `hf_auser`
+
+[ 2017-04-10T11:07:40+08:00 ] ::1 /shop/Admin/User/add
+ERR: 1364:Field 'addtime' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `hf_adminuser` (`admin_name`,`admin_pass`,`truename`) VALUES ('1','d41d8cd98f00b204e9800998ecf8427e','')
+
+[ 2017-04-10T11:08:41+08:00 ] ::1 /shop/Admin/User/add
+ERR: 1364:Field 'addtime' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `hf_adminuser` (`admin_name`,`admin_pass`,`truename`) VALUES ('12121','d41d8cd98f00b204e9800998ecf8427e','')
+
+[ 2017-04-10T11:11:54+08:00 ] ::1 /shop/Admin/User/add
+ERR: 1364:Field 'addtime' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `hf_adminuser` (`admin_name`,`admin_pass`,`truename`) VALUES ('11','d41d8cd98f00b204e9800998ecf8427e','')
+
+[ 2017-04-10T11:21:53+08:00 ] ::1 /shop/Admin/User/del/id/2
+ERR: 1146:Table 'shop.hf_auser' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `hf_auser`
+
+[ 2017-04-10T14:26:33+08:00 ] ::1 /shop/Admin/User/edit
+ERR: 1048:Column 'admin_pass' cannot be null
+ [ SQL语句 ] : UPDATE `hf_adminuser` SET `truename`='潘宏钢1',`admin_pass`=NULL,`addtime`='1491805593' WHERE `id` = 2
+
+[ 2017-04-10T14:27:35+08:00 ] ::1 /shop/Admin/User/edit
+ERR: 1048:Column 'admin_pass' cannot be null
+ [ SQL语句 ] : UPDATE `hf_adminuser` SET `truename`='潘宏钢1',`admin_pass`=NULL,`addtime`='1491805655' WHERE `id` = 2
+
+[ 2017-04-10T14:50:42+08:00 ] ::1 /shop/Admin/User/edit
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( id=3 )' at line 1
+ [ SQL语句 ] : UPDATE `hf_adminuser` SET  WHERE ( id=3 )
+
+[ 2017-04-10T15:19:37+08:00 ] ::1 /shop/Admin/User/sendMail/id/1
+ERR: 1146:Table 'shop.hf_auser' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `hf_auser`
+
+[ 2017-04-10T15:19:44+08:00 ] ::1 /shop/Admin/User/sendMail/id/2
+ERR: 1146:Table 'shop.hf_auser' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `hf_auser`
+
+[ 2017-04-10T15:26:06+08:00 ] ::1 /shop/Admin/User/add
+ERR: 1364:Field 'email' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `hf_adminuser` (`admin_name`,`admin_pass`,`truename`,`addtime`) VALUES ('胡建波','202cb962ac59075b964b07152d234b70','胡','1491809166')
+
+[ 2017-04-10T15:28:07+08:00 ] ::1 /shop/Admin/User/add
+ERR: 1364:Field 'email' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `hf_adminuser` (`admin_name`,`admin_pass`,`truename`,`addtime`) VALUES ('胡建波','202cb962ac59075b964b07152d234b70','胡','1491809287')
+
+[ 2017-04-10T15:28:26+08:00 ] ::1 /shop/Admin/User/add
+ERR: 1364:Field 'email' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `hf_adminuser` (`admin_name`,`admin_pass`,`truename`,`addtime`) VALUES ('123','202cb962ac59075b964b07152d234b70','潘宏钢','1491809306')
+
+[ 2017-04-10T15:45:06+08:00 ] ::1 /shop/Admin/Role/index.html
+ERR: 1146:Table 'shop.hf_role' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `hf_role`
+
+[ 2017-04-10T15:46:44+08:00 ] ::1 /shop/Admin/Subject/index.html
+ERR: 无法加载控制器:Subject
+

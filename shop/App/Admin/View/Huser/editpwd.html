@@ -1,0 +1,44 @@
+<include file="Public/header" />
+<include file="Public/nav" />
+    <div class="row-fluid" id="main">
+        <div class="span8 offset2">
+            <form class="form-horizontal " action="__URL__/editpwd" method="post">
+                <h3>修改密码</h3>
+                <input type="hidden" name="id" value="{$user.id}">
+                <div class="control-group">
+                    <label class="control-label">账户名</label>
+                    <div class="controls">
+                        <input type="text" name="admin_name" disabled value="{$user.admin_name}" placeholder="name">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">原密码</label>
+                    <div class="controls">
+                        <input type="password" name="repwd" placeholder="请输入原密码">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">新密码</label>
+                    <div class="controls">
+                        <input type="password" name="admin_pass" value="" placeholder="请输入新密码">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">确认密码</label>
+                    <div class="controls">
+                        <input type="password" name="readmin_pass" value="" placeholder="怕你弄错，再次确认">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                            &nbsp;
+                        </label>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;修改&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<include file="Public/footer" />

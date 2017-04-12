@@ -16,10 +16,10 @@ class LoginController extends Controller
 
             $password = md5($_POST['password']);
 
-            $info = M('auser')->where("name='{$_POST['name']}'")->find();
+            $info = M('adminuser')->where("admin_name='{$_POST['name']}'")->find();
 
             if ($info) {
-                if ($info['password'] == $password) {
+                if ($info['admin_pass'] == $password) {
                     $_SESSION['adminuser'] = $info;
 
                     // //获取登录成功用户的操作权限

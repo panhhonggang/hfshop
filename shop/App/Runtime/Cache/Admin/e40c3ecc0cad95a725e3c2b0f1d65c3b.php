@@ -1,4 +1,16 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><html >
+	<head>
+		<style >
+			#inputEmail{
+				height: 30px;
+			}
+
+			
+		</style>
+	
+	</head>
+	<body>
+		<!DOCTYPE HTML>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +33,7 @@
             <p class="lead">欢迎各位老师来后蓝鸥商城平台后台！</p>
         </div>
     </div>
-
+		
 
     <div class="row-fluid" id="nav">
         <div class="span8 offset2">
@@ -66,59 +78,75 @@
             </ul>
         </div>
     </div>
-    <div class="row-fluid" id="main">
-        <div class="span8 offset2">
-            <form class="form-horizontal " action="/shop/Admin/User/add" method="post">
-                <h3>添加管理员</h3>
+				<div class="row-fluid" id="main">
+		
+		<div class="span8 offset2">	
+			
+			<form class="form-horizontal" action= <?php echo U('Goods/update');?> method="post" enctype="multipart/form-data">
+				<h3>商品更新</h3>
+				<input type="hidden" value=<?php echo ($info["id"]); ?> name="id"/>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail">分类id</label>
+				   <div class="controls">
+         	        <select name = 'cateName' type="text">
+			         <?php if(is_array($ids)): foreach($ids as $key=>$v): if($v['id'] == $info['cateid']): ?><option selected><?php echo ($v["name"]); ?></option>
+				        <?php else: ?>
+	 			         <option><?php echo ($v["name"]); ?></option><?php endif; endforeach; endif; ?>
+			        </select>
+				   </div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail">商品名称</label>
+					<div class="controls">
+						<input type="text" id="inputEmail" name = "name"  value=<?php echo ($info["name"]); ?>>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail" >价格</label>
+					<div class="controls">
+						<input type="text" id="inputEmail" name = "price"
+						 value=<?php echo ($info["price"]); ?>>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail" >是否下架</label>
+					<div class="controls">
+						<input type="text" id="inputEmail" name = "display"
+						value=<?php echo ($info["display"]); ?>>
+					</div>
+				</div>
 
-                <div class="control-group">
-                    <label class="control-label">账户名</label>
-                    <div class="controls">
-                        <input type="text" name="admin_name" placeholder="就是你用来登录的那玩意儿">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">密码</label>
-                    <div class="controls">
-                        <input type="password" name="admin_pass" placeholder="密码！！！！">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">确认密码</label>
-                    <div class="controls">
-                        <input type="password" name="repassword" placeholder="再输一次，怕你弄错了">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">真实姓名</label>
-                    <div class="controls">
-                        <input type="text" name="truename" placeholder="来者何人？报上名来！">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">邮箱</label>
-                    <div class="controls">
-                        <input type="email" name="email" placeholder="输入邮箱账户">
-                    </div>
-                </div>
-                
-                <div class="control-group">
-                    <div class="controls">
-                        <label class="checkbox">
-                            &nbsp;
-                        </label>
-                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail">商品状态</label>
+					<div class="controls">
+						<input type="text" id="inputEmail"  name = "status"  value=<?php echo ($info["status"]); ?>>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail" >商品简介</label>
+					<div class="controls">
+						<textarea id="inputEmail"  name = "descripe"><?php echo ($info["descripe"]); ?></textarea>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail" >商品图片</label>
+					<div class="controls">
+						<input type="file" id="inputEmail" name = "picture">
+					</div>
+				</div>
+				
+				<div class="control-group">
+					<div class="controls">
+						<label class="checkbox">
+							&nbsp;
+						</label>
+						<button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提交&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+					</div>
+				</div>
+			</form>			
 
-    <div class="row-fluid" id="footer">
-        <div class="span8 offset2">
-            <p>©2012 - 2017 Lanou 蓝鸥(广州)</p>
-        </div>
-    </div>
+		</div>
+		</div>
 
-</body>
+	</body>
 </html>

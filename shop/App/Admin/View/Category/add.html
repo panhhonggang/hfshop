@@ -1,0 +1,54 @@
+<html >
+	<head>
+		<style >
+			#inputEmail{
+				height: 30px;
+			}
+			
+			
+		</style>
+	
+	</head>
+	<body>
+		<include file="Public/header" />
+		<include file="Public/nav" />
+		
+		<div class="row-fluid" id="main">		
+		<div class="span8 offset2">	
+			
+		<form action= {:U('category/add')} method="post">
+				<h3>分类添加</h3>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail">分类id</label>
+					<div class="controls">
+			         <select name = 'pidName' type="text">
+				         <foreach name = 'info' item = 'v'>
+					         <option>{$v.name}</option>
+				         </foreach>
+					         <option>0</option>
+		
+			         </select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputEmail">分类名称</label>
+					<div class="controls">
+						<input type="text" id="inputEmail" name = "name">
+					</div>
+				</div>				
+				<div class="control-group">
+					<div class="controls">
+						<label class="checkbox">
+							&nbsp;
+						</label>
+						<button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;提交&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+					</div>
+				</div>
+			</form>			
+
+		</div>
+		</div>	     
+	    </form>
+	</body>
+</html>
+

@@ -1,0 +1,47 @@
+[ 2017-04-11T09:39:17+08:00 ] ::1 /shop/Admin/User/editpwd.html/id=1
+ERR: 非法操作:editpwd.html
+
+[ 2017-04-11T09:40:10+08:00 ] ::1 /shop/Admin/User/editpwd.html/id=1
+ERR: 非法操作:editpwd.html
+
+[ 2017-04-11T09:40:16+08:00 ] ::1 /shop/Admin/User/editpwd.html/id=1
+ERR: 非法操作:editpwd.html
+
+[ 2017-04-11T11:23:54+08:00 ] ::1 /shop/Admin/User/editpwd
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( id=1 )' at line 1
+ [ SQL语句 ] : UPDATE `hf_adminuser` SET  WHERE ( id=1 )
+
+[ 2017-04-11T11:25:23+08:00 ] ::1 /shop/Admin/User/editpwd
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( id=1 )' at line 1
+ [ SQL语句 ] : UPDATE `hf_adminuser` SET  WHERE ( id=1 )
+
+[ 2017-04-11T11:31:35+08:00 ] ::1 /shop/Admin/User/editpwd
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( `id`=1 )' at line 1
+ [ SQL语句 ] : UPDATE `hf_adminuser` SET  WHERE ( `id`=1 )
+
+[ 2017-04-11T11:32:02+08:00 ] ::1 /shop/Admin/User/editpwd
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( id=1 )' at line 1
+ [ SQL语句 ] : UPDATE `hf_adminuser` SET  WHERE ( id=1 )
+
+[ 2017-04-11T11:32:58+08:00 ] ::1 /shop/Admin/User/editpwd
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( id=1 )' at line 1
+ [ SQL语句 ] : UPDATE `hf_adminuser` SET  WHERE ( id=1 )
+
+[ 2017-04-11T11:43:57+08:00 ] ::1 /shop/Admin/Role/index.html
+ERR: 无法加载控制器:Role
+
+[ 2017-04-11T11:45:49+08:00 ] ::1 /shop/Admin/Huser/add.html
+ERR: 无法加载控制器:Huser
+
+[ 2017-04-11T11:45:56+08:00 ] ::1 /shop/Admin/Huser/index.html
+ERR: 无法加载控制器:Huser
+
+[ 2017-04-11T11:47:24+08:00 ] ::1 /shop/Admin/Huser/index.html
+ERR: Think\Model:getAll方法不存在！
+
+[ 2017-04-11T11:48:39+08:00 ] ::1 /shop/Admin/Huser/index.html
+ERR: Think\Model:getAll方法不存在！
+
+[ 2017-04-11T11:50:00+08:00 ] ::1 /shop/Admin/Huser/index.html
+ERR: Think\Model:getAll方法不存在！
+

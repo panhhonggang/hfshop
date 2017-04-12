@@ -42,17 +42,17 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">分类管理<b class="caret"></b></a>
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">商品学科管理<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo U('Category/add');?>">添加学科</a></li>
-                        <li><a href="<?php echo U('Category/showlist');?>">学科列表</a></li>
+                        <li><a href="<?php echo U('Subject/add');?>">添加学科</a></li>
+                        <li><a href="<?php echo U('Subject/index');?>">学科列表</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">商品管理<b class="caret"></b></a>
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">分类管理<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?php echo U('Goods/add');?>">添加商品</a></li>
-                        <li><a href="<?php echo U('Goods/showlist');?>">商品列表</a></li>
+                        <li><a href="#">添加分类</a></li>
+                        <li><a href="#">分类列表</a></li>
                     </ul>
                 </li>
 
@@ -68,46 +68,39 @@
     </div>
     <div class="row-fluid" id="main">
         <div class="span8 offset2">
-            <form class="form-horizontal " action="/shop/Admin/User/add" method="post">
-                <h3>添加管理员</h3>
-
+            <form class="form-horizontal " action="/shop/Admin/Huser/editpwd" method="post">
+                <h3>修改密码</h3>
+                <input type="hidden" name="id" value="<?php echo ($user["id"]); ?>">
                 <div class="control-group">
                     <label class="control-label">账户名</label>
                     <div class="controls">
-                        <input type="text" name="admin_name" placeholder="就是你用来登录的那玩意儿">
+                        <input type="text" name="admin_name" disabled value="<?php echo ($user["admin_name"]); ?>" placeholder="name">
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label">密码</label>
+                    <label class="control-label">原密码</label>
                     <div class="controls">
-                        <input type="password" name="admin_pass" placeholder="密码！！！！">
+                        <input type="password" name="repwd" placeholder="请输入原密码">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">新密码</label>
+                    <div class="controls">
+                        <input type="password" name="admin_pass" value="" placeholder="请输入新密码">
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label">确认密码</label>
                     <div class="controls">
-                        <input type="password" name="repassword" placeholder="再输一次，怕你弄错了">
+                        <input type="password" name="readmin_pass" value="" placeholder="怕你弄错，再次确认">
                     </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label">真实姓名</label>
-                    <div class="controls">
-                        <input type="text" name="truename" placeholder="来者何人？报上名来！">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">邮箱</label>
-                    <div class="controls">
-                        <input type="email" name="email" placeholder="输入邮箱账户">
-                    </div>
-                </div>
-                
                 <div class="control-group">
                     <div class="controls">
                         <label class="checkbox">
                             &nbsp;
                         </label>
-                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;确认&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                        <button class="btn btn-large btn-primary form-submit" type="submit">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;修改&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                     </div>
                 </div>
             </form>

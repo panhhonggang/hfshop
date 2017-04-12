@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="/2lanou/project/Public/css/bootstrap.min.css" media="screen" />
-    <link rel="stylesheet" href="/2lanou/project/Public/css/style.css" />
+    <link rel="stylesheet" href="/shop/Public/css/bootstrap.min.css" media="screen" />
+    <link rel="stylesheet" href="/shop/Public/css/style.css" />
     <!--响应式特性 css-->
-    <link href="/2lanou/project/Public/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/shop/Public/css/bootstrap-responsive.min.css" rel="stylesheet">
     <!-- jquery -->
-    <script type="text/javascript" src="/2lanou/project/Public/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/shop/Public/js/jquery-1.8.3.min.js"></script>
     <!-- bootstrap.js -->
-    <script type="text/javascript" src="/2lanou/project/Public/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/shop/Public/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="row-fluid" id="header">
@@ -46,7 +46,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">实训学科管理<b class="caret"></b></a>
+                    <a href="#"  class="dropdown-toggle" data-toggle="dropdown" href="#">商品学科管理<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?php echo U('Subject/add');?>">添加学科</a></li>
                         <li><a href="<?php echo U('Subject/index');?>">学科列表</a></li>
@@ -73,7 +73,7 @@
 
     <div class="row-fluid" id="main">
         <div class="span8 offset2">
-            <form class="form-search fr" action="/2lanou/project/Admin/Role/index" method="get">
+            <form class="form-search fr" action="/shop/Admin/Role/index" method="get">
                 <input type="text" name="name" class="input-medium" placeholder="Name">
                 <select name="sex">
                     <option value="">--请选择--</option>
@@ -101,9 +101,9 @@
                         <td><?php echo ($vo["status"]); ?></td>
                         <td><?php echo ($vo["ramark"]); ?></td>
                         <td>
-                            <a href="/2lanou/project/Admin/Role/nodeList/id/<?php echo ($vo["id"]); ?>">分配节点</a>
-                            <a href="/2lanou/project/Admin/Role/del/id/<?php echo ($vo["id"]); ?>">删除</a>
-                            <a href="/2lanou/project/Admin/Role/edit/id/<?php echo ($vo["id"]); ?>">编辑</a>
+                            <a href="/shop/Admin/Role/nodeList/id/<?php echo ($vo["id"]); ?>">分配节点</a>
+                            <a href="/shop/Admin/Role/del/id/<?php echo ($vo["id"]); ?>">删除</a>
+                            <a href="/shop/Admin/Role/edit/id/<?php echo ($vo["id"]); ?>">编辑</a>
                         </td>
                     </tr><?php endforeach; endif; ?>
                     <?php else: ?>

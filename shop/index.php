@@ -6,6 +6,9 @@
     //开启调试模式
     define('APP_DEBUG',True);
 
+    //域名，上线后把localhost改成域名即可
+    define('SITE_URL','http://localhost/shop/');
+
     //设置目录安全结构
     define('BUILD_DIR_SECURE', false);
 

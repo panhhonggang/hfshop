@@ -1,0 +1,70 @@
+<html >
+	<head>
+		<style >
+			
+			#search{
+				height: 30px;
+			}
+			td{
+				width: 10%;
+				height: 50px;
+
+			}
+	
+		</style>		
+		
+	</head>
+	<body>
+		<include file="Public/header" />
+		<include file="Public/nav" />
+
+		<div class="row-fluid" id="main">
+		
+		<div class="span8 offset2">		
+
+		    <form class="form-search fr" action={:U('Category/find')} method="post">
+			    			请输入分类名：
+		    	<input type="text" id = 'search' name="name" value="name" class="input-medium" placeholder="Name">
+		    	<button type="submit" class="btn">搜索</button>
+		    </form>
+		    
+
+			<table class="table table-striped">
+				<thead>
+			      <tr>
+				      <td>id</td>
+				      <td>pid</td>
+				      <td>分类名</td>
+		  		      <td>分类路径</td>
+				      <td>添加时间</td>
+				      <td>操作</td>
+			      </tr>
+				</thead>
+				<tbody>
+         <foreach name='info' item="v">
+          <tr>
+            <foreach name = 'v' item = "vv" key = 'k'>
+            <td>
+                <if condition = "$k == addtime">
+	            {$vv|date="Y-m-d H:i:s",###}
+	            <else/>{$vv}
+                </if>
+            </td>
+            </foreach>
+            <td>
+	            <a href="{:U('Category/delete',array('id'=>$v['id']))}">删除</a>
+<!-- 	            <a href="{:U('Category/update','id =' .$v['id'])}">更新</a> -->
+	            <a href="{:U('Category/update',array('id'=>$v['id']))}">更新</a>
+
+            </td>
+          </tr>
+         </foreach>
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+	</body>
+</html>
+

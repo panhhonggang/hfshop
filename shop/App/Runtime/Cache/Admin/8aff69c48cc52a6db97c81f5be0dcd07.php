@@ -68,19 +68,19 @@
     </div>
     <div class="row-fluid" id="main">
         <div class="span8 offset2">
-            <form class="form-horizontal " action="/shop/Admin/User/add" method="post">
-                <h3>添加管理员</h3>
+            <form class="form-horizontal " action="/shop/Admin/Huser/add" method="post">
+                <h3>添加前台用户</h3>
 
                 <div class="control-group">
                     <label class="control-label">账户名</label>
                     <div class="controls">
-                        <input type="text" name="admin_name" placeholder="就是你用来登录的那玩意儿">
+                        <input type="text" name="home_name" placeholder="就是你用来登录的那玩意儿">
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label">密码</label>
                     <div class="controls">
-                        <input type="password" name="admin_pass" placeholder="密码！！！！">
+                        <input type="password" name="home_pass" placeholder="密码！！！！">
                     </div>
                 </div>
                 <div class="control-group">
@@ -89,19 +89,7 @@
                         <input type="password" name="repassword" placeholder="再输一次，怕你弄错了">
                     </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label">真实姓名</label>
-                    <div class="controls">
-                        <input type="text" name="truename" placeholder="来者何人？报上名来！">
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">邮箱</label>
-                    <div class="controls">
-                        <input type="email" name="email" placeholder="输入邮箱账户">
-                    </div>
-                </div>
-                
+            
                 <div class="control-group">
                     <div class="controls">
                         <label class="checkbox">
